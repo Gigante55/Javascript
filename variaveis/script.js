@@ -1,28 +1,13 @@
-// Por qual motivo o código abaixo retorna com erros?
-{
-  var cor = 'preto';
-  const marca = 'Fiat';
-  let portas = 4;
-  console.log(cor, marca, portas);
+// window.alert('isso mesmo');
+
+const href = window.locarion.href;
+
+console.log(href);
+
+if (href === "http://127.0.0.1:5500/o-que-e-o-dom/") {
+  console.log("É igual");
 }
 
-// Como corrigir o erro abaixo?
-const dois = 2;
-function somarDois(x) {
-  return x + dois;
-}
-function dividirDois(x) {
-  return x / dois;
-}
-console.log(somarDois(4));
-console.log(dividirDois(10));
+const h1Selecionado = document.querySelector("h1");
 
-// O que fazer para total retornar 500?
-const numero = 50;
-
-for(let numero = 0; numero < 10; numero++) {
-  console.log(numero);
-}
-
-const total = 10 * numero;
-console.log(total);
+alert("Teste");
