@@ -1,26 +1,22 @@
-// Mostre no console cada parágrado do site
-const paragrafos = document.querySelectorAll("p");
-console.log(paragrafos);
+const itensMenu = document.querySelectorAll(".menu a");
 
-paragrafos.forEach((item) => {
-  console.log(item);
+itensMenu.forEach((item) => {
+  item.classList.add("ativo");
 });
 
-// Mostre o texto dos parágrafos no console
-paragrafos.forEach((item) => {
-  console.log(item.innerText);
+itensMenu.forEach((item) => {
+  item.classList.remove("ativo");
 });
+itensMenu[0].classList.add("ativo");
 
-// Como corrigir os erros abaixo;
 const imgs = document.querySelectorAll("img");
 
-imgs.forEach(item, (index) => {
-  console.log(item, index);
+imgs.forEach((img) => {
+  const possuiAtributo = img.hasAttribute("alt");
+  console.log(possuiAtributo);
 });
 
-let i = 0;
-imgs.forEach(() => {
-  console.log(i++);
-});
+document.querySelector('a[href^="http"]');
+link.setAttribute("href", "https://www.google.com/");
 
-imgs.forEach(() => i++);
+console.log(link);
