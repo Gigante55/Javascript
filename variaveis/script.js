@@ -1,22 +1,20 @@
-const itensMenu = document.querySelectorAll(".menu a");
+const listaAnimais = document.querySelector(".animais-lista");
 
-itensMenu.forEach((item) => {
-  item.classList.add("ativo");
-});
+const height = listaAnimais.scrollHeight;
+const animaisTop = listaAnimais.offsetTop;
+console.log(animaisTop);
 
-itensMenu.forEach((item) => {
-  item.classList.remove("ativo");
-});
-itensMenu[0].classList.add("ativo");
+const primeiroh2 = document.querySelector("h2");
+const h2left = primeiroh2.offsetLeft;
 
-const imgs = document.querySelectorAll("img");
+const rect = primeiroh2.getBoundingClientRect();
 
-imgs.forEach((img) => {
-  const possuiAtributo = img.hasAttribute("alt");
-  console.log(possuiAtributo);
-});
+console.log(rect.top);
 
-document.querySelector('a[href^="http"]');
-link.setAttribute("href", "https://www.google.com/");
-
-console.log(link);
+console.log(
+  window.innerWidth,
+  window.innerHeight,
+  window.outerWidth,
+  window.outerHeight,
+  window.pageYOffset,
+);

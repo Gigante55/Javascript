@@ -1,37 +1,22 @@
-const menu = document.querySelector(".menu");
+const itensMenu = document.querySelectorAll(".menu a");
 
-menu.classList.add("ativo", "teste");
-menu.classList.remove("azul");
-menu.classList.toggle("azul");
-if (menu.classList.contains("azul")) {
-  menu.classList.add("possui-azul");
-} else {
-  menu.classList.add("nao-possui-azul");
-}
+itensMenu.forEach((item) => {
+  item.classList.add("ativo");
+});
 
-menu.className = menu.className + " vermelho";
+itensMenu.forEach((item) => {
+  item.classList.remove("ativo");
+});
+itensMenu[0].classList.add("ativo");
 
-console.log(menu.className);
+const imgs = document.querySelectorAll("img");
 
-// console.log(menu.classList);
+imgs.forEach((img) => {
+  const possuiAtributo = img.hasAttribute("alt");
+  console.log(possuiAtributo);
+});
 
-const animais = document.querySelector(".animais");
-console.log(animais.attributes.class["data-texto"]);
+document.querySelector('a[href^="http"]');
+link.setAttribute("href", "https://www.google.com/");
 
-const img = document.querySelector("img");
-
-const srcImg = img.getAttribute("alt");
-
-img.setAttribute("alt", "É uma raposa");
-
-const possuiAlt = img.hasAttribute("alt");
-console.log(possuiAlt);
-
-console.log(srcImg);
-
-const carro = {
-  portas: 4,
-  andar: function (km) {
-    console.log(`Andou ${km}`);
-  },
-};
+console.log(link);
