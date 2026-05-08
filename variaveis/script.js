@@ -47,3 +47,13 @@ function handleKeyboard(event) {
 }
 
 window.addEventListener("keydown", handleKeyboard);
+
+const imgs = document.querySelectorAll("img");
+
+function handleImg(event) {
+  console.log(event.currentTarget.getAttribute("src"));
+}
+
+imgs.forEach((img) => {
+  img.addEventListener("click", handleImg);
+});
