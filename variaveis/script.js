@@ -1,15 +1,15 @@
-const menu = document.querySelector(".menu");
-const copy = document.querySelector(".copy");
+const tabMenu = document.querySelectorAll(".js-tabmenu li");
+const tabContent = document.querySelectorAll(".js-tabcontent section");
 
-const cloneMenu = menu.cloneNode(true);
-copy.appendChild(cloneMenu);
+function activeTab(index) {
+  tabContent.forEach((section) => {
+    section.classList.remove("ativo");
+  });
+  tabContent[index].classList.add("ativo");
+}
 
-const faq = document.querySelector(".faq");
-const primeiroDt = faq.querySelector("dt");
-const proximoDD = primeiroDt.nextElementSibling;
-
-console.log(proximoDD);
-
-const animais = document.querySelector(".animais");
-
-faq.innerHTML = animais.innerHTML;
+tabMenu.forEach((itemMenu, index) => {
+  itemMenu.addEventListener("click", () => {
+    activeTab(index);
+  });
+});
