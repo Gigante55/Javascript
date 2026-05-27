@@ -1,20 +1,15 @@
-function Carro(marcaAtribuida, precoAtribuido) {
-  this.marca = marcaAtribuida;
-  this.preco = precoAtribuido;
+const pessoa = {
+  nome: "Nome pessoa",
+  idade: 0,
+  andar() {
+    console.log(this.nome + "andou");
+  },
+};
+
+function Pessoa(nome, idade) {
+  this.nome = nome;
+  this.idade = idade;
+  this.andar = function () {
+    console.log(nome + "Andou");
+  };
 }
-
-const honda = new Carro("Honda", 3000);
-const fiat = new Carro("Fiat", 4000);
-
-function Carro(marca, precoInicial) {
-  this.taxa = 1.2;
-  const precoFinal = precoInicial * this.taxa;
-  console.log(this);
-  this.marca = marca;
-  console.log(this);
-
-  this.preco = precoFinal;
-  console.log(this);
-}
-
-const mazda = new Carro2("Mazda", 5000);
