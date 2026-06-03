@@ -1,47 +1,32 @@
-function teste(nome, idade) {
+function Pessoa(nome, sobrenome, idade) {
   this.nome = nome;
+  this.sobrenome = sobrenome;
   this.idade = idade;
-  this.abracar = function () {
-    return "Abraçou";
-  };
-  this.andar = function () {
-    return "Andou pelo objeto";
-  };
 }
 
-var obj = {
-  nome: "Nadre",
-  idade: 33,
+Pessoa.prototype.nomeCompleto = function () {
+  return `${this.nome} ${this.sobrenome}`;
 };
 
-Pessoa.prototype.andar = function () {
-  return this.nome + "Pessoa andou";
-};
+const arthur = new Pessoa("Arthur", "C.P.S", 13);
 
-Pessoa.prototype.nadar = function () {
-  return this.nome + "Pessoa nadou";
-};
+const aryadne = new Pessoa("Aryadne", "C.P.S", 31);
 
-const andre = new Pessoa("Andre", 28);
+const raphael = new Pessoa("Raphael", "R.S", 34);
 
-// console.log(Pessoa.prototype);
-// console.log(andre.prototype);
+Object.getOwnPropertyNames(NodeList.prototype);
+Object.getOwnPropertyNames(HTMLCollection.prototype);
+Object.getOwnPropertyNames(Document.prototype);
 
-const pais = "Brasil";
-const cidade = new String("Rio");
+const li = document.querySelector("li");
 
-const listaAnimais = ["Cachorro", "Gato", "Cavalo"];
+li; // HTMLLIElement
+li.click; // Function
+li.innerText; // String
+li.value; // Number
+li.hidden; // Boolean
+li.offsetLeft; // Number
+li.click(); // undefined
 
-const lista = document.querySelectorAll("li");
-
-// Transforma em uma array
-const listaArray1 = Array.prototype.slice.call(lista);
-const listaArray2 = Array.from(lista);
-
-const Carro = {
-  marca: "Ford",
-  preco: 2000,
-  andar() {
-    return true;
-  },
-};
+// Qual o construtor do dado abaixo:
+li.hidden.constructor.name;
