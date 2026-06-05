@@ -1,6 +1,16 @@
-console.log(typeof Array.fromasdajdka !== "undefined");
+Object;
+String;
+Array;
+Function;
+Number;
 
-if (typeof Array.fromadaskjda !== "undefined") {
+Window;
+history;
+Document;
+HTMLCollection;
+NodeList;
+
+if (typeof document.webkitVisibilityState !== "undefined") {
   console.log("Existe");
 } else {
   console.log("Não existe");
