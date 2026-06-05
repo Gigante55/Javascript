@@ -1,17 +1,9 @@
-Object;
-String;
-Array;
-Function;
-Number;
+const comida = "Pizza";
+const agua = new String("Agua");
 
-Window;
-history;
-Document;
-HTMLCollection;
-NodeList;
+console.log(agua.length);
 
-if (typeof document.webkitVisibilityState !== "undefined") {
-  console.log("Existe");
-} else {
-  console.log("Não existe");
-}
+const frase = "A melhor comida";
+
+console.log(frase[frase.length - 1]);
+console.log(frase.charAt(frase.length - 1));
