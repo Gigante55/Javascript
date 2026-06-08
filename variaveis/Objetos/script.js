@@ -36,3 +36,12 @@ const listaPrecos = ["R$ 99", "R$ 199", "R$ 12000"];
 listaPrecos.forEach((item) => {
   console.log(item.padStart(10, "-"));
 });
+
+const frase2 = "Ta";
+
+frase2.repeat(5);
+
+let listaItens = "Camisas Bonés Calças Bermudas Vestidos Saias";
+listaItens = listaItens.replace(/[ ]+/g, ", ");
+
+const arrayLista;
