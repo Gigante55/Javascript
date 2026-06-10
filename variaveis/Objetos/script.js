@@ -42,6 +42,30 @@ const frase2 = "Ta";
 frase2.repeat(5);
 
 let listaItens = "Camisas Bonés Calças Bermudas Vestidos Saias";
+
 listaItens = listaItens.replace(/[ ]+/g, ", ");
 
-const arrayLista;
+console.log(listaItens);
+const arrayLista = listaItens.split(", ");
+
+console.log(arrayLista);
+
+const htmlText = "<div>O melhor iten</div><div>A melhor lista</div>";
+const htmlArray = htmlText.split("div");
+const novoHtml = htmlArray.join("section");
+
+console.log(htmlText);
+console.log(htmlArray);
+
+const frutasArray = ["Banana", "Melancia", "Laranja"];
+
+const sexo1 = "Feminino";
+const sexo2 = "feminino";
+const sexo3 = "FEMININO";
+
+console.log(sexo1.toUpperCase() === "FEMININO");
+
+const valor = "  R$ 23.00   ";
+valor.trim(); // 'R$ 23.00'
+valor.trimStart(); // 'R$ 23.00   '
+valor.trimEnd(); // '  R$ 23.00'
