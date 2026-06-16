@@ -8,8 +8,13 @@ console.log(parseInt(23.49, 10));
 
 const preco = 10.32323;
 console.log(preco.toFixed());
-const valor = 48.49;
+const valor2 = 48.49;
 
 let valor = 48.49;
 valor = valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 console.log(valor);
+console.log(Math.PI);
+
+const aleatorio = Math.floor(Math.random() * (40 - 20 + 1)) + 20;
+
+console.log(aleatorio);
