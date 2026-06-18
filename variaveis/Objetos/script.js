@@ -1,33 +1,38 @@
-// Retorne um número aleatório
-// entre 1050 e 2000
-const aleatorio = Math.floor(Math.random() * (2000 - 1050 + 1) + 1050);
-console.log(aleatorio)
+const instrumentos = ["Guitarra", "Baixo", "Violão"];
+const precos = [49, 99, 69, 89];
 
+const dados = [
+  new String("Tipo 1"),
+  ["Carro", "Portas", { cor: "Azul", preco: 2000 }],
+  function andar(nome) {
+    console.log(nome);
+  },
+];
 
-// Retorne o maior número da lista abaixo
-const numeros = '4, 5, 20, 27, 9';
-const arrayNumeros = numeros.split(', ');
-const numeroMaximo = Math.max(...arrayNumeros);
+const carros = new Array("Ford", "Fiat", "Honda");
 
-console.log(numeroMaximo);
+carros[2] = "Ferrari";
+carros[3] = "Kia";
+carros[20] = "Kia";
 
-// Crie uma função para limpar os preços
-// e retornar os números com centavos arredondados
-// depois retorne a soma total
-const listaPrecos = ['R$ 59,99', ' R$ 100,222',
-                     'R$ 230  ', 'r$  200'];
+console.log(carros.length);
 
-function limparPreco(preco) {
-  preco = +preco.toUpperCase().replace('R$', '').trim().replace(',', '.');
-  preco = +preco.toFixed(2);
-  return preco;
-}
+const li = document.querySelectorAll("li");
 
-let soma = 0;
-listaPrecos.forEach((preco) => {
-  soma += limparPreco(preco);
-})
+const arrayLi = Array.from(li);
 
-console.log(soma.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}));
+const obj = {
+  0: "Andre",
+  1: "Rafael",
+  2: "Teste",
+  length: 4,
+};
 
-limparPreco(listaPrecos[1]);
+const objArray = Array.from(obj);
+
+console.log(li);
+console.log(arrayLi);
+
+const frutas = ["Banana", "Pêra", ["Uva Roxa", "Uva Verde"]];
+
+console.log(frutas.length);
