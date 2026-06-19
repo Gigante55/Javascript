@@ -49,13 +49,10 @@ const carros = ["Ford", "Fiat", "VW"];
 carros.unshift("Kia", "Ferrari");
 const novaArray = carros.push("Parati", "Gol");
 
-// console.log(novaArray);
-
-// console.log(carros);
-
-// console.log(carros.shift());
+console.log(novaArray);
 
 console.log(carros);
-console.log(carros.splice(2, 0, "Fusca"));
+
+console.log(carros.shift());
 
 console.log(carros);
