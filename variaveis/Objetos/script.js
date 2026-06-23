@@ -45,9 +45,9 @@
 
 // console.log(instrumentos);console.log(idades);
 
-const carros = ["Ford", "Fiat", "VW"];
-carros.unshift("Kia", "Ferrari");
-const novaArray = carros.push("Parati", "Gol");
+// const carros = ["Ford", "Fiat", "VW"];
+// carros.unshift("Kia", "Ferrari");
+// const novaArray = carros.push("Parati", "Gol");
 
 // console.log(novaArray);
 
@@ -55,21 +55,28 @@ const novaArray = carros.push("Parati", "Gol");
 
 // console.log(carros.shift());
 
-console.log(carros);
-console.log(carros.splice(2, 0, "Fusca"));
+// console.log(carros);
+// console.log(carros.splice(2, 0, "Fusca"));
 
-console.log(carros);
+// console.log(carros);
 
 // console.log(["Item1", "Item2", "Item3", "Item4", "Item5"].copyWithin(2, 0, 2));
 
-console.log(["Item1", "Item2", "Item3", "Item4"].fill("Banana", 0, 3));
+// console.log(["Item1", "Item2", "Item3", "Item4"].fill("Banana", 0, 3));
 
-const transporte1 = ["Barco", "Aviao"];
-const transporte2 = ["Carro", "Moto"];
+// const transporte1 = ["Barco", "Aviao"];
+// const transporte2 = ["Carro", "Moto"];
 
-const linguagens = ["html", "css", "js", "php", "python", "js"];
+// let htmlString = "<h2>Título Principal</h2>";
+// htmlString = htmlString.split("h2");
+// htmlString = htmlString.join("h1");
 
-let htmlString = "<h2>Título Principal</h2>";
-htmlString = htmlString.split("h2");
+// console.log(htmlString);
 
-console.log(htmlString);
+const linguagens = ["html", "css", "js", "php", "python"];
+
+const cloneLinguagens = linguagens.slice();
+
+console.log(linguagens.pop());
+console.log(linguagens);
+console.log(cloneLinguagens);
