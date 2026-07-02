@@ -61,8 +61,17 @@
 // console.log(arrayNomeAulas);
 // console.log(tempoAulas);
 
-const aulas = [10, 25, 30];
+// const aulas = [10, 25, 30];
 
-const reduceAulas = aulas.reduce((acumulador, item, index, array) => {
-  console.log(acumulador, item, index, array);
-}, 0);
+// const reduceAulas = aulas.reduce((acumulador, item, index, array) => {
+//   console.log(acumulador, item, index, array);
+// }, 0);
+
+const numeros = [10, 25, 30, 3, 54, 33, 22];
+
+const maiorNumero = numeros.reduce(
+  (anterior, atual) => (anterior > atual ? anterior : atual),
+  0,
+);
+
+console.log(maiorNumero);
