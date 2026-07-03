@@ -113,6 +113,8 @@ const every = frutas.every((fruta) => {
   return fruta;
 });
 
+const indexUva = frutas.findIndex((item) => {});
+
 console.log(every);
 
 // console.log(temUva);
