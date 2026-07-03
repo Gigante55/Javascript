@@ -67,60 +67,11 @@
 //   console.log(acumulador, item, index, array);
 // }, 0);
 
-// const numeros = [10, 25, 30, 3, 54, 33, 22];
+const numeros = [10, 25, 30, 3, 54, 33, 22];
 
-// const maiorNumero = numeros.reduce(
-//   (anterior, atual) => (anterior > atual ? anterior : atual),
-//   0,
-// );
+const maiorNumero = numeros.reduce(
+  (anterior, atual) => (anterior > atual ? anterior : atual),
+  0,
+);
 
-// console.log(maiorNumero);
-
-// const aulas = [
-//   {
-//     nome: "HTML 1",
-//     min: 15,
-//   },
-//   {
-//     nome: "HTML 2",
-//     min: 10,
-//   },
-//   {
-//     nome: "CSS 1",
-//     min: 20,
-//   },
-//   {
-//     nome: "JS 1",
-//     min: 25,
-//   },
-// ];
-
-// // var acumulador = {};
-// // acumulador[0] = "asdkahsdjkahs";
-// const listaAulas = aulas.reduce((acumulador, aula, index) => {
-//   acumulador[index] = aula.nome;
-//   return acumulador;
-// }, {});
-
-const frutas = ["Banana", "Pêra", "Uvas"];
-
-// const temUva = frutas.some((item) => {
-//   return item === "Uva";
-// });
-
-const every = frutas.every((fruta) => {
-  console.log(fruta);
-  return fruta;
-});
-
-console.log(every);
-
-// console.log(temUva);
-
-const numeros = [6, 43, 22, 88, 101, 29];
-
-const maiorQue3 = numeros.every(function (n) {
-  return n >= 7;
-});
-
-console.log(maiorQue3);
+console.log(maiorNumero);
