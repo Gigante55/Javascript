@@ -58,12 +58,15 @@ const compras = [
   {
     item: 'Quejo',
     preco: 'R$ 10,60'
+  },
+  {
+    item: 'Arroz',
+    preco: 'R$ 5,50'
   }
 ]
 
 const valorTotal = compras.reduce((acumulador, item) => {
   const precoLimpo = +item.preco.replace('R$ ', '').replace(',', '.')
-
   return acumulador + precoLimpo;
 }, 0)
 
