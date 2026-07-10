@@ -8,10 +8,10 @@
 // console.log(somar.name)
 
 // function darOi(nome, idade) {
-//   console.log('Oi para você' + nome + idade)
+//   console.log('Oi para você ' + nome + idade)
 // }
 
-// darOi.call(null, 'Andre', 28);
+// darOi.call(null, 'André', 28);
 
 // window.marca = 'Carro';
 // window.ano = 288
@@ -23,21 +23,56 @@
 
 // descricaoCarro.call({marca: 'Honda', ano: 2015}, 100);
 
-const carros = ['Ford', 'Fiat', 'VW']
-const frutas = ['Banana', 'Uva', 'Pêra']
+// const carros = ['Ford', 'Fiat', 'VW'];
+// const frutas = ['Banana', 'Uva', 'Pêra'];
 
-carros.forEach.call(frutas, (item) => {
-  console.log(item)
+
+// carros.forEach.call(frutas, (item) => {
+//   console.log(item)
+// })
+
+// function Dom(seletor) {
+//   this.element = document.querySelector(seletor);
+// }
+
+// Dom.prototype.ativo = function(classe) {
+//   console.log(this);
+//   this.element.classList.add(classe);
+// }
+
+// const li = {
+//   element: document.querySelector('li')
+// }
+
+// Dom.prototype.ativo.call(li, 'ativar');
+
+
+// const ul = new Dom('ul');
+
+
+
+
+// ul.ativo.call(li, 'ativo');
+// ul.ativo('ativar');
+
+const frutas = ['Uva', 'Maçã', 'Banana'];
+
+Array.prototype.pop.call(frutas);
+frutas.pop();
+
+const arrayLike = {
+  0: 'Item 1',
+  1: 'Item 2',
+  2: 'Item 3',
+  length: 3,
+}
+
+const li = document.querySelectorAll('li');
+
+const filtro = Array.prototype.filter.call(li, (item) => {
+  return item.classList.contains('ativo');
 })
 
-function Dom(seletor) {
-  this.element = document.querySelector(seletor)
-}
+console.log(filtro);
 
-Dom.prototype.ativo = function(classe) {
-this.element.classList.add(classe)
-}
-
-const ul = new Dom('ul');
-
-console.log(ul.element);
+console.log(li)
