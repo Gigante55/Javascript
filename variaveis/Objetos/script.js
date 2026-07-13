@@ -68,8 +68,9 @@ const arrayLike = {
 }
 
 const li = document.querySelectorAll('li');
+const arrayLi = Array.from(li);
 
-const filtro = Array.prototype.filter.call(li, (item) => {
+const filtro = arrayLi.filter((item) => {
   return item.classList.contains('ativo');
 })
 
