@@ -77,26 +77,3 @@ const filtro = arrayLi.filter((item) => {
 console.log(filtro);
 
 console.log(li)
-
-const numeros = [33, 23, 2, 42314, 234, 234, 34, 243]
-
-const $ = document.querySelectorAll.bind(document);
-
-
-const carro = {
-  marca: 'Ford',
-  ano: 2018,
-  acelerar: function(aceleracao, tempo) {
-    return `${this.marca} acelerou ${aceleracao} em ${tempo}`;
-  }
-}
-
-const honda = {
-marca: 'Honda'
-}
-
-const acelerarHonda = carro.acelerar.bind(honda)
-
-console.log(acelerarHonda(30))
-
-console.log(carro)
