@@ -19,9 +19,16 @@ conteudo ? elemento.innerHTML = conteudo : null;
   return elemento;
 }
 
-console.log(criarElemento('li', 'ativa'))
+console.log(criarElemento('li', 'azul', 'Esse é o conteudo'))
 
 
 // Crie uma nova função utilizando a anterior como base
 // essa nova função deverá sempre criar h1 com a
 // classe titulo. Porém o parâmetro conteudo continuará dinâmico
+
+const h1Titulo = criarElemento.bindo(null, 'h1', 'titulo');
+
+const cursosJS = h1Titulo('Cursos de JavaScript')
+const cursosHTML = h1Titulo('Cursos de HTML')
+
+console.log(cursosJS, cursosHTML)
