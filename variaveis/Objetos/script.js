@@ -50,6 +50,7 @@ const moto = {
 
 Object.defineProperties(moto, {
 rodas: {
+  enumerable: true,
 get() {
 return this._rodas;
 },
@@ -59,5 +60,15 @@ this._rodas = valor * 4 + 'Total Rodas'
 }
 })
 
-moto.rodas = 3;
 console.log(moto)
+
+const innerHeightConfig = Object.getOwnPropertyDescriptor(window, 'innerHeight');
+
+Object.getOwnPropertyNames(Array.prototype)
+
+const frutas = ['Banana'];
+
+console.log(Object.getPrototypeOf(''));
+console.log(Array.prototype);
+
+const frutas1 = ['Banana', 'Pêra'];
