@@ -50,11 +50,14 @@ const moto = {
 
 Object.defineProperties(moto, {
 rodas: {
-  value: 2,
-  configurable: false,
-  writable: true,
+get() {
+return this._rodas;
+},
+set(valor) {
+this._rodas = valor * 4 + 'Total Rodas'
+}
 }
 })
 
-moto.rodas;
+moto.rodas = 3;
 console.log(moto)
