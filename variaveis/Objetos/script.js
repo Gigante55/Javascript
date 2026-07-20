@@ -43,32 +43,69 @@
 
 // console.log(moto)
 
-const moto = {
-  capacete: true,
+// const moto = {
+//   capacete: true,
+// }
+
+
+// Object.defineProperties(moto, {
+// rodas: {
+//   enumerable: true,
+// get() {
+// return this._rodas;
+// },
+// set(valor) {
+// this._rodas = valor * 4 + 'Total Rodas'
+// }
+// }
+// })
+
+// console.log(moto)
+
+// const innerHeightConfig = Object.getOwnPropertyDescriptor(window, 'innerHeight');
+
+// Object.getOwnPropertyNames(Array.prototype)
+
+// const frutas = ['Banana'];
+
+// console.log(Object.getPrototypeOf(''));
+// console.log(Array.prototype);
+
+// const frutas1 = ['Banana', 'Pêra'];
+// const frutas2 = ['Banana', 'Pêra']
+
+// const novaFruta = frutas1;
+
+// novaFruta[0] = 'Uva';
+
+// console.log(frutas1)
+
+// Object.is(frutas1, novaFruta)
+
+// const carro = {
+//   marca: 'Ford',
+//   ano: 2018,
+// }
+
+// Object.freeze(carro);
+// carro.portas = 4;
+// delete carro.marca;
+
+// carro.marca = 'Honda'
+
+// console.log(carro)
+// console.log(Object.isFrozen(carro))
+
+const frutas = ['Banana', 'Uva'];
+const frase = 'Oi frase';
+const somar = function() {
+  return a + b;
+};
+
+const carro = {
+  marca: 'Ford'
 }
 
+console.log(frutas.toString())
 
-Object.defineProperties(moto, {
-rodas: {
-  enumerable: true,
-get() {
-return this._rodas;
-},
-set(valor) {
-this._rodas = valor * 4 + 'Total Rodas'
-}
-}
-})
-
-console.log(moto)
-
-const innerHeightConfig = Object.getOwnPropertyDescriptor(window, 'innerHeight');
-
-Object.getOwnPropertyNames(Array.prototype)
-
-const frutas = ['Banana'];
-
-console.log(Object.getPrototypeOf(''));
-console.log(Array.prototype);
-
-const frutas1 = ['Banana', 'Pêra'];
+console.log(Object.prototype.toString.call(frutas));
