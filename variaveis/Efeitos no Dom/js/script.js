@@ -6,7 +6,9 @@ import * as teste from './modules/teste.js';
 
 teste.teste1()
 teste.teste2()
-console.log();
+console.log(teste.senha);
+
+console.log(esseNome);
 
 initScrollSuave();
 initAnimacaoScroll();
