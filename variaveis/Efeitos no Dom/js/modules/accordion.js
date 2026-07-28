@@ -1,6 +1,4 @@
-import * as teste from './modules/teste.js';
 
-console.log(teste.senha)
 
 export default function initAccordion() {
   const accordionList = document.querySelectorAll('[data-anime="accordion"] dt');
