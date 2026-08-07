@@ -10,14 +10,26 @@ tooltips.forEach((item) => {
 
 function onMouseOver(event) {
   const tooltipBox = criarTooltipBox(this);
-  console.log(event)
+  tooltipBox.style.top = event.pageY + 'px';
+  tooltipBox.style.left = event.pageX + 'px';
+
+onMouseLeave.tooltipBox = tooltipBox;
+this.addEventListener('mouseleave', onMouseLeave);
 }
+
+const onMouseLeave = {
+  tooltipBox: '',
+  handleEvent() {
+  this.tooltipBox.remove();
+  }
+}
+
 
 function criarTooltipBox(element) {
   const tooltipBox = document.createElement('div');
   const text = element.getAttribute('aria-label');
   tooltipBox.classList.add('tooltip');
   tooltipBox.innerText = text;
-  document.body.appendChild('tooltipBox');
+  document.body.appendChild(tooltipBox);
   return tooltipBox;
 }

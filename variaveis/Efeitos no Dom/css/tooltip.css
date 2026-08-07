@@ -9,5 +9,5 @@
   font-weight: bold;
   font-size: .875rem;
   max-width: 150px;
-  box-sizing: 2px;
+  border-radius: 2px;
 }
