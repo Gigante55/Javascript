@@ -9,14 +9,24 @@ export default function initDropdownMenu() {
   function handleClick(event) {
     event.preventDefault();
     this.classList.add('active');
-    outsideClick();
+    outsideClick(this, () => {
+this.classList.remove('active');
+    });
   };
 }
 
 function outsideClick(callback) {
   const html = document.documentElement;
-  html.addEventListener('click', handleOutsideClick);
+  const outside = 'data-outside'
+
+if(element.hasAttribute())
+  html.addEventListener('click', 
+  handleOutsideClick);
+  element.setAttribute(outside, '');
   function handleOutsideClick(event) {
-    callback();
+    if(!element.contains(event.target)) {
+      html.removeEventListener('click', handleOutsideClick);
+      callback();
+    }
   }
 }
