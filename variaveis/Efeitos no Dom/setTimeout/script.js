@@ -1,34 +1,7 @@
-// const btn = document.querySelector('button');
-
-// btn.addEventListener('click', handleClick);
-
-// function handleClick() {
-//   setTimeout(() => {
-//     console.log(this)
-//     this.classList.add('active');
-//   }, 1000)
-// }
-
-// setTimeout(function() {
-// console.log('Testando')
-// }, 0);
-
-// for(let i = 0; i < 20; i++) {
-//   setTimeout(() => {
-//     console.log(i);
-//   }, 300 * i)
-// }
-
-function loop(texto) {
-  console.log(texto);
+// Mude a cor da tela para azul e depois para vermelho a cada 2s.
+function mudarClasse() {
+  document.body.classList.toggle('active');
 }
-// setInterval(loop, 300, '300ms')
 
-let i = 0;
-const meuLoop = setInterval(() => {
-  console.log(i++);
-  if(i > 20) {
-    clearInterval()
-  }
-}, 300);
-
+// Crie um cronometro utilizando o setInterval. Deve ser possível
+// iniciar, pausar e resetar (duplo clique no pausar).
