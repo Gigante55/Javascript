@@ -18,17 +18,19 @@ pausar.addEventListener('dblclick', resetarTempo);
 let i = 0;
 let timer;
 
-
 function iniciarTempo() {
 timer = setInterval(() => {
   tempo.innerText = i++;
 }, 100);
+iniciar.setAttribute('disabled', '');
 }
 
 function pausarTempo() {
-console.log('pausar')
+clearInterval(timer);
+iniciar.removeAttribute('disabled');
 }
 
 function resetarTempo() {
-console.log('resetar')
+  tempo.innerText = 0;
+i = 0;
 }
