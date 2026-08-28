@@ -19,6 +19,9 @@
   position: relative;
   z-index: 300;
  } 
+ .js [data-menu="button"].active::before {
+transform: rotate()
+ }
  .js [data-menu="button"]::before {
   margin-right: 4px;
   content: '';
