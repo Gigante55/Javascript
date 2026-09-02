@@ -19,4 +19,4 @@ menuButton.classList.remove('active');
 })
 }
 
-eventos.forEach(evento => menuButton.addEventListener(evento, openMenu))
+
