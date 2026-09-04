@@ -12,5 +12,8 @@
 }
 
 .numeros-grid span {
-  font-family: 'IBM Plex'
+  font-family: 'IBM Plex', monospace;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #E54;
 }
