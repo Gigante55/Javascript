@@ -13,6 +13,6 @@ numeros.forEach((numero) => {
     numero.innerText = start;
     if(start > total)
       clearInterval(timer)
-  }, 25)
+  }, 25) 
   console.log(total)
 })
