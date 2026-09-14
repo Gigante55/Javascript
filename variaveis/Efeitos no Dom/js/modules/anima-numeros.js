@@ -6,13 +6,23 @@ const numeros = document.querySelectorAll('[data-numero]');
 
 numeros.forEach((numero) => {
   const total = +numero.innerText;
-  const inscremento = total / 100;
+  const inscremento = Math.floor(total / 100);
   let start = 0;
   const timer = setInterval(() => {
     start = start + inscremento;
     numero.innerText = start;
-    if(start > total)
+    if(start > total) {
+      numero.innerText = total;
       clearInterval(timer)
-  }, 25) 
-  console.log(total)
+    }
+  }, 25 * Math.random()); 
 })
+
+function handleMutation() {
+
+}
+
+const observerTarget = document.querySelector('.numeros');
+const observer = new MutationObserver(handleMutation);
+
+observer.observe(observerTarget, {attribute: true})
