@@ -18,11 +18,11 @@ numeros.forEach((numero) => {
   }, 25 * Math.random()); 
 })
 
-function handleMutation() {
-
+function handleMutation(mutation) {
+console.log(mutation[0].target.classList.contains('ativo'))
 }
 
 const observerTarget = document.querySelector('.numeros');
 const observer = new MutationObserver(handleMutation);
 
-observer.observe(observerTarget, {attribute: true})
+observer.observe(observerTarget, {attributes: true})
