@@ -1,4 +1,4 @@
-export default function initFuncionamento() {
+export default function initFuncionamento() { 
 
 }
 
