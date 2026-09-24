@@ -2,18 +2,13 @@ export default function initFuncionamento() {
 
 }
 
-const agora = new Date();
-const futuro = new Date('Dec 24 2018 23:59');
+const funcionamento = document.querySelector('[data-semana]');
+const diasSemana = funcionamento.dataset.semana.split(',').map(Number);
+const horarioSemana = funcionamento.dataset.horario.split(',').map(Number);
 
-console.log(agora.getMonth());
 
-console.log(futuro)
+const dataAgora = new Date();
+const diaAgora = dataAgora.getDay();
+const horarioAgora = dataAgora.getHours();
 
-function transformarDias(tempo) {
-  return tempo / (24 * 60 * 60 * 1000);
-}
-
-const diasAgora = transformarDias(agora.getTime());
-const diasFuturo = transformarDias(futuro.getTime());
-
-console.log(diasFuturo - diasAgora);
+console.log(horarioAgora);
