@@ -43,12 +43,13 @@
     <input type="text" name="nome" id="nome">
     <label for="email">Email</label>
     <input type="text" name="email" id="email">
+    <label for="mensagem">Mensagem</label>
+    <textarea name="mensagem" id="teste"></textarea>
   </form>
 
   <script>
     const contato = document.querySelector('#contato');
-    console.log(contato)
-    console.log(document.forms[0]);
+    console.log(contato.elements.mensagem)
   </script>
 </body>
 
