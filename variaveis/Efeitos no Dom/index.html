@@ -42,15 +42,19 @@
     <label for="nome">Nome</label>
     <input type="text" name="nome" id="nome">
     <label for="email">Email</label>
-    <input type="text" name="email" id="email">
+    <input type="text" name="email" id="email" required>
     <label for="mensagem">Mensagem</label>
     <textarea name="mensagem" id="mensagem"></textarea>
   </form>
   <span class="texto"></span>
   <script>
     const contato = document.querySelector('#contato');
-    const texto = document.querySelector('.text');
+    const texto = document.querySelector('.texto');
     function handleKeyUp(event) {
+      const target = event.target;
+
+
+      console.log(event.target.checkValidity());
       console.log(event.target.value);
       texto.innerText = event.target.value;
     }
