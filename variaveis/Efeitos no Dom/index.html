@@ -44,12 +44,17 @@
     <label for="email">Email</label>
     <input type="text" name="email" id="email">
     <label for="mensagem">Mensagem</label>
-    <textarea name="mensagem" id="teste"></textarea>
+    <textarea name="mensagem" id="mensagem"></textarea>
   </form>
-
+  <span class="texto"></span>
   <script>
     const contato = document.querySelector('#contato');
-    console.log(contato.elements.mensagem)
+    const texto = document.querySelector('.text');
+    function handleKeyUp(event) {
+      console.log(event.target.value);
+      texto.innerText = event.target.value;
+    }
+    contato.addEventListener('change', handleKeyUp);
   </script>
 </body>
 
