@@ -37,12 +37,19 @@
     textarea {
       height: 150px;
     }
+
+    .invalido {
+      border-color: red;
+    }
   </style>
+
   <form name="contato" id="contato">
     <label for="nome">Nome</label>
-    <input type="text" name="nome" id="nome">
+    <input type="text" name="nome" id="nome" required>
+    <span class="erro"></span>
     <label for="email">Email</label>
     <input type="text" name="email" id="email" required>
+    <span class="erro"></span>
     <label for="mensagem">Mensagem</label>
     <textarea name="mensagem" id="mensagem"></textarea>
   </form>
@@ -53,7 +60,11 @@
     function handleKeyUp(event) {
       const target = event.target;
 
-
+      if (!target.checkValidity()) {
+        target.classList.add('invalido');
+        contato.nome.setCustomValidity('Nome é totalmente necessário');
+        target.nextElementSibling.innerText = target.validationMessage;
+      }
       console.log(event.target.checkValidity());
       console.log(event.target.value);
       texto.innerText = event.target.value;
