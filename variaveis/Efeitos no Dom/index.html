@@ -24,7 +24,7 @@
       margin: 0 auto;
     }
 
-    input[type="text"],
+    input,
     textarea {
       width: 100%;
       box-sizing: border-box;
@@ -52,24 +52,15 @@
     <span class="erro"></span>
     <label for="mensagem">Mensagem</label>
     <textarea name="mensagem" id="mensagem"></textarea>
-    <select name="cores" id="cores">
-      <option value="blue">azul</option>
-      <option value="red">vermelho</option>
-    </select>
-    <input type="checkbox" value="identidade" id="identidade">
-    <label for="identidade">Possui identidade?</label>
   </form>
-  <span class="texto"></span>
   <script>
     const contato = document.querySelector('#contato');
-    const texto = document.querySelector('.texto');
-
-    function handleKeyUp(event) {
-      if (event.target.checked) {
-        console.log(event.target.value)
-      }
+    const dados = {};
+    function handleChange(event) {
+      dados[event.target.name] = event.target.value;
+      console.log(dados)
     }
-    contato.addEventListener('change', handleKeyUp);
+    contato.addEventListener('change', handleChange);
   </script>
 </body>
 
