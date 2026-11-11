@@ -25,7 +25,13 @@ border(value) {
 },
 borderRadius(value) {
   this.element.style.borderRadius = value + 'px';
-}
+},
+fontFamily(value) {
+this.element.style.fontFamily = value;
+},
+fontSize(value) {
+this.element.style.fontSize = value + 'rem';
+},
 }
 
 function handleChange(event) {
@@ -33,4 +39,8 @@ function handleChange(event) {
   const value = event.target.value;
 
   handleStyle[name](value);
+}
+
+function showCss() {
+  cssText.innerHTML = btn.style.cssText;
 }
