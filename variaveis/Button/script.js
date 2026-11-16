@@ -39,25 +39,22 @@ function handleChange(event) {
   const value = event.target.value;
 
   handleStyle[name](value);
-  saveValues(name, value);
+  saveValues(name, value)
   showCss();
 }
 
-function saveValues(name, value) {
+function saveValues(nome, value) {
   localStorage[name] = value;
 }
 
 function setValues() {
   const properties = Object.keys(localStorage);
   properties.forEach(propertie => {
-    handleStyle[propertie](localStorage[propertie]);
-    controles.elements[propertie].value = localStorage[propertie];
-  });
-  showCss();
+    handleStyle[propertie]
+    controles.elements[propertie] = localStorage[propertie];
+  })
+  console.log(properties);
 }
-
-localStorage.nome = 'André'
-console.log(localStorage.nome);
 
 function showCss() {
   cssText.innerHTML = '<span>' + btn.style.cssText.split('; ').join(';</span><span>');
